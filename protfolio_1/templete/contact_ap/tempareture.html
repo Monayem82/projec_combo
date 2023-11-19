@@ -3,8 +3,11 @@
 
 {% block css %} 
 <style>
-    body {
-        background-color: aqua;
+    main {
+        /* background: url(images/bg-image.jpg) no-repeat; */
+        background: url('{% static "images/bg-image.jpg" %}') no-repeat;
+        /* background-size: cover; */
+        height: 100vh;
     } 
 </style>
 {% endblock css %}
@@ -18,6 +21,7 @@
 
     <main>
         <section>
+            <hr>
             <h1 class="text-center my-4">Tempareture Hot</h1>
             <div class="container">
                 <form class="col-md-6 m-auto py-5">
