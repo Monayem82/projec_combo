@@ -1,0 +1,13 @@
+{% extends 'common_file/index.html' %}
+{% load static %}
+{% block css %} 
+    <link rel="stylesheet" href="{% static 'css/dj2.css' %}">
+{% endblock css %}
+{% block title %} Django 22222 {% endblock title %}
+
+{% block content %}
+    <h1>Hi i am Django 2 pages and i render this times</h1>
+
+    <a href="{% url 'homes' %}">Homes</a>
+
+{% endblock content %}

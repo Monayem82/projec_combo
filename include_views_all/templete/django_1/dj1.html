@@ -1,0 +1,16 @@
+{% extends 'common_file/index.html' %}
+{% load static %}
+{% block css %} 
+    <link rel="stylesheet" href="{% static 'css/dj.css' %}">
+{% endblock css %}
+{% block title %} Django 1 {% endblock title %}
+
+{% block content %}
+    <h1>Hi i am Django 1 pages and i render this times</h1>
+    <button type="button"><a href="{% url 'dj2page' %}">Click to go Dj2</a></button>
+    <button type="button"><a href="{% url 'dj2page' %}">Click to go Dj2</a></button>
+    <button type="button"><a href="{% url 'dj2page' %}">Click to go Dj2</a></button>
+    <button type="button"><a href="{% url 'dj2page' %}">Click to go Dj2</a></button>
+
+
+{% endblock content %}

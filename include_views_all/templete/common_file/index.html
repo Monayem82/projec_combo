@@ -1,0 +1,17 @@
+<!DOCTYPE html>{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index_com.css' %}">
+    {% block css %} {% endblock css %}
+    <title> {% block title %} {% endblock title %}</title>
+</head>
+<body>
+    <h1>Hi i am common pages pages</h1>
+
+    {% block content %} {% endblock content %}
+    
+    <p>fooder sections</p>
+</body>
+</html>
