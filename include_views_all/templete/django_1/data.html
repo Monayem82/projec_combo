@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data View</title>
+</head>
+<body>
+    <h1>Form</h1>
+
+    <form action="" method="">
+            {{form2.as_p}}
+
+        <button>submit</button>
+    </form>
+    <hr>
+    <br><br>
+    <form action="" method="">
+            {{form.as_p}}
+
+        <button>submit</button>
+    </form>
+
+
+    <h1>Data view in databases</h1>
+    {{tabledata}}
+    {% if tabledata %}
+    <table>
+        <tr>
+            <th>id</th>
+            <th>id coustom</th>
+            <th>names</th>
+            <th>Balance</th>
+        </tr>
+        {% for data in tabledata %}
+        <tr>
+            <td> {{data.id}} </td>
+            <td> {{data.ids}} </td>
+            <td> {{data.names}} </td>
+            <td> {{data.balance}} </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+    {% else %}
+    <h1>no store data</h1>
+    {% endif %}
+
+    <hr>
+    <hr>
+    {{sdata}}
+
+    {% if sdata %}
+        <h1>studnet data</h1>
+        <table>
+            <tr>
+                <th>id</th>
+                <th>s_id</th>
+                <th>name</th>
+                <th>Roll</th>
+                <th>Dep</th>
+            </tr>
+            {% for stu in sdata %}
+            <tr>
+                <td> {{stu.id}} </td>
+                <td> {{stu.s_id}} </td>
+                <td> {{stu.s_name}} </td>
+                <td> {{stu.s_roll}} </td>
+                <td> {{stu.s_dep}} </td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    {% else %}
+        <h1>no data</h1>
+    {% endif %}
+</body>
+</html>
